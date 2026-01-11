@@ -15,14 +15,11 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
-
-
 header {
     text-align: center;
     padding: 30px 0;
@@ -41,17 +38,13 @@ h1 {
 .subtitle {
     color: #fff;
     font-size: 1.2rem;
-
 }
-
 .cards-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 50px;
 }
-
-
 .card {
     background-color: #111;
     border-radius: 12px;
@@ -62,13 +55,10 @@ h1 {
     background: rgba(0, 0, 0, .1);
     backdrop-filter: blur(10px);
 }
-
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 7px 15px rgba(0, 0, 0, 0.81);
 }
-
-
 .image-container {
     position: relative;
     width: 100%;
@@ -76,7 +66,6 @@ h1 {
     overflow: hidden;
     background-color: #000;
 }
-
 .card-image {
     position: absolute;
     top: 0;
@@ -86,12 +75,9 @@ h1 {
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
 .card:hover .card-image {
     transform: scale(1.05);
 }
-
-
 .card-content {
     padding: 25px;
 }
@@ -195,4 +181,5 @@ footer {
         padding: 20px;
     }
 }
+
 
