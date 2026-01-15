@@ -6,7 +6,7 @@ Bu mening shaxsiy web-saytim. Sayt zamonaviy dizayn va responsive ko‘rinishda 
 👉 [Saytga kirish](https://colinuzb.github.io/ColinDev/)
 
 ## 🖼 Sayt ko‘rinishi
-[![Sayt preview](colindev/img/Node.png)](https://colinuzb.github.io/ColinDev/)
+[![Sayt preview](img/Node.png)](https://colinuzb.github.io/ColinDev/)
 
 ## ⚙️ Texnologiyalar
 - HTML
