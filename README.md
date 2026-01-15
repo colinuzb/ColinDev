@@ -1,6 +1,6 @@
 # ColinDev — shaxsiy sayt 🌐
 
-Bu mening shaxsiy web-saytim. Sayt zamonaviy dizayn va responsive ko‘rinishda yaratilgan.
+* Bu mening shaxsiy web-saytim. Sayt zamonaviy dizayn va responsive ko‘rinishda yaratilgan. *
 
 ## 🔗 Sayt havolasi
 👉 [Saytga kirish](https://colinuzb.github.io/ColinDev/)
