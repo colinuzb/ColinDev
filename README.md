@@ -1,19 +1,21 @@
 # ColinDev — shaxsiy sayt 🌐
 
-* Bu mening shaxsiy web-saytim. Sayt zamonaviy dizayn va responsive ko‘rinishda yaratilgan. *
+**Bu mening shaxsiy web-saytim. Sayt zamonaviy dizayn va responsive ko‘rinishda yaratilgan.**
 
 ## 🔗 Sayt havolasi
 👉 [Saytga kirish](https://colinuzb.github.io/ColinDev/)
 
 ## 🖼 Sayt ko‘rinishi
 [![Sayt preview](img/Node.png)](https://colinuzb.github.io/ColinDev/)
+[![Sayt preview](img/Alight.jpg)](https://colinuzb.github.io/ColinDev/)
+[![Sayt preview](img/PhotoShop.png)](https://colinuzb.github.io/ColinDev/)
 
-## ⚙️ Texnologiyalar
-- HTML
-- CSS
-- JavaScript
+## ⚙️ Owner
+- **Colin**
+- **Marcos**
+- **JovaUz**
 
 ## 📦 Loyihaning xususiyatlari
-- Responsive dizayn
-- Tez yuklanish
-- Oddiy va chiroyli UI
+- **Vzlom Ilovalar**
+- **Tekin Dasturlar**
+- **Modli O'yinlar**
