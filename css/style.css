@@ -123,12 +123,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.81);
-}
-
-
 .image-container {
     position: relative;
     width: 100%;
@@ -146,12 +140,6 @@ body {
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
-.card:hover .card-image {
-    transform: scale(1.05);
-}
-
-
 .card-content {
     padding: 25px;
 }
