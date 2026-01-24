@@ -103,6 +103,90 @@ body {
     font-size: 1.2rem;
 
 }
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+
+.card {
+    background-color: #111;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border: 1px solid #333;
+    background: rgba(0, 0, 0, .1);
+
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.card-content {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.card-description {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+
+.download-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 0;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, .1);
+
+}
+
+.download-btn:hover {
+    background: linear-gradient(90deg, #1C1919);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.81);
+}
+
+.download-btn i {
+    margin-right: 8px;
+}
 
 footer {
     text-align: center;
@@ -132,6 +216,22 @@ footer {
 @media (max-width: 1024px) {
   .header{
     padding: 1.3rem 5%;
+  }
+  .cards-container {
+      grid-template-columns: 1fr;
+      gap: 25px;
+  }
+
+  h1 {
+      font-size: 2.2rem;
+  }
+
+  .subtitle {
+      font-size: 1rem;
+  }
+
+  .card-content {
+      padding: 20px;
   }
 }
 
@@ -176,5 +276,12 @@ footer {
     transform: translateY(0);
     transition-delay: calc(.15s * var(--i));
     opacity: 1;
+  }
+  .cards-container {
+      gap: 20px;
+  }
+
+  .card-content {
+      padding: 20px;
   }
 }
