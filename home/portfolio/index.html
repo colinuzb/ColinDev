@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐂𝐨𝐥𝐢𝐧𝐔𝐳𝐛 𝐖𝐞𝐛 𝐁𝐮𝐢𝐥𝐝 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲</title>
+    <link rel="icon" href="../../img/logo.png">
+    <style>
+
+        :root {
+            --bg-color: #05070a;
+            --surface-color: #11141b;
+            --accent-color: #00f2ff;
+            --accent-glow: rgba(0, 242, 255, 0.3);
+            --text-main: #ffffff;
+            --text-dim: #a0a8b3;
+            --nav-bg: rgba(5, 7, 10, 0.8);
+            --transition: all 0.3s ease;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #111827 0%, #05070a 100%);
+            position: relative;
+        }
+
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--accent-glow);
+            filter: blur(100px);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-dim);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--accent-glow);
+        }
+
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .about {
+            text-align: center;
+            background-color: var(--surface-color);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--text-dim);
+        }
+
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background: #1e232d;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+        }
+
+        .card h3 {
+            margin-bottom: 0.75rem;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+
+        .features-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 3rem;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background: var(--accent-glow);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+        }
+
+
+        .cta {
+            background: linear-gradient(90deg, #001f22 0%, #05070a 100%);
+            text-align: center;
+            border-top: 1px solid rgba(0, 242, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+        }
+
+
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .socials {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .socials a:hover {
+            color: var(--accent-color);
+        }
+
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">𝐂𝐨𝐥𝐢𝐧𝐖𝐞𝐛</a>
+                <ul class="nav-links">
+                    <li><a href="#">𝐇𝐨𝐦𝐞</a></li>
+                    <li><a href="#about">𝐀𝐛𝐨𝐮𝐭</a></li>
+                    <li><a href="#projects">𝐅𝐞𝐚𝐭𝐮𝐫𝐞</a></li>
+                    <li><a href="#contact">𝐓𝐞𝐚𝐦</a></li>
+                </ul>
+                <a href="../../index.html" class="btn btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">𝐐𝐚𝐲𝐭𝐢𝐬𝐡</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>𝐂𝐨𝐥𝐢𝐧𝐖𝐞𝐛 𝐃𝐚𝐬𝐭𝐮𝐫𝐢 𝐇𝐚𝐪𝐢𝐝𝐚 𝐊𝐞𝐫𝐚𝐤𝐥𝐢 𝐌𝐚𝐥𝐮𝐦𝐨𝐭𝐥𝐚𝐫.</h1>
+            <p>𝐂𝐨𝐥𝐢𝐧𝐖𝐞𝐛 𝐃𝐚𝐬𝐭𝐮𝐫𝐢 𝐀𝐬𝐨𝐬𝐚𝐧 𝐃𝐚𝐬𝐭𝐮𝐫𝐜𝐡𝐢𝐥𝐚𝐫, 𝐆𝐚𝐦𝐞𝐫𝐥𝐚𝐫, 𝐃𝐢𝐳𝐚𝐲𝐧𝐞𝐫𝐥𝐚𝐫 𝐯𝐚 𝐒𝐡𝐮𝐧𝐠𝐚 𝐎❜𝐱𝐬𝐡𝐚𝐬𝐡 𝐒𝐨𝐡𝐚 𝐎𝐝𝐚𝐦𝐥𝐚𝐫𝐧𝐢 𝐔𝐜𝐡𝐮𝐧 𝐐𝐮𝐥𝐚𝐲𝐥𝐢𝐤𝐧𝐢 𝐘𝐚𝐫𝐚𝐭𝐚𝐝𝐢.</p>
+            <a href="#projects" class="btn btn-primary">𝐓𝐨❜𝐥𝐢𝐪 𝐌𝐚𝐥𝐮𝐦𝐨𝐭</a>
+        </div>
+    </section>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">𝐁𝐢𝐳𝐧𝐢𝐧𝐠 𝐕𝐚𝐳𝐢𝐟𝐚</h2>
+            <p>𝐁𝐢𝐳 𝐃𝐚𝐬𝐭𝐮𝐫𝐧𝐢 𝐇𝐞𝐜𝐡 𝐐𝐚𝐧𝐝𝐚𝐲 𝐑𝐞𝐤𝐥𝐚𝐦𝐚𝐬𝐢𝐳 𝐕𝐬 𝐐𝐨❜𝐬𝐡𝐢𝐦𝐜𝐡𝐚 𝐎𝐛𝐮𝐧𝐚𝐬𝐢𝐳 𝐐𝐢𝐥𝐢𝐛 𝐘𝐚𝐬𝐚𝐠𝐚𝐧𝐦𝐢𝐳. 𝐁𝐢𝐳𝐧𝐢𝐧𝐠 𝐃𝐚𝐬𝐭𝐮𝐫 𝐓𝐞𝐥𝐞𝐟𝐨𝐧 𝐕𝐚 𝐊𝐨𝐦𝐩𝐲𝐮𝐭𝐞𝐫 𝐔𝐜𝐡𝐮𝐧 𝐊𝐞𝐫𝐚𝐤𝐥𝐢 𝐈𝐥𝐨𝐯𝐚 𝐘𝐨𝐤𝐢 𝐃𝐚𝐬𝐭𝐮𝐫𝐧𝐢 𝐕𝐳𝐥𝐨𝐦(𝐌𝐎𝐃) 𝐕𝐞𝐫𝐬𝐢𝐲𝐚𝐬𝐢𝐧𝐢 𝐎❜𝐳 𝐈𝐜𝐡𝐢𝐠𝐚 𝐎𝐥𝐚𝐝𝐢. 𝐇𝐞𝐜𝐡 𝐐𝐚𝐧𝐝𝐚𝐲 𝐕𝐢𝐫𝐮𝐬 𝐕𝐚 𝐇𝐞𝐜𝐡 𝐐𝐚𝐧𝐝𝐚𝐲 𝐇𝐚𝐯𝐟𝐥𝐢 𝐏𝐨𝐜𝐤𝐞𝐭𝐥𝐚𝐫 𝐘𝐨❜𝐪.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">𝐇𝐮𝐬𝐮𝐬𝐢𝐲𝐚𝐭𝐥𝐚𝐫</h2>
+            <div class="projects-grid">
+                <div class="card">
+                    <div class="card-img">𝐃𝐚𝐬𝐭𝐮𝐫 𝐓𝐞𝐳𝐥𝐢𝐠𝐢</div>
+                    <h3>𝐃𝐚𝐬𝐭𝐮𝐫 𝐓𝐞𝐳𝐥𝐢𝐠𝐢</h3>
+                    <p>𝐃𝐚𝐬𝐭𝐮𝐫𝐝𝐚 𝐇𝐞𝐜𝐡 𝐐𝐚𝐧𝐝𝐚𝐲 𝐕𝐢𝐫𝐮𝐬 𝐏𝐨𝐜𝐤𝐞𝐭 𝐌𝐚𝐯𝐣𝐮𝐝 𝐄𝐦𝐚𝐬. 𝐒𝐡𝐮 𝐒𝐚𝐛𝐚𝐛𝐝𝐚𝐧 𝐃𝐚𝐬𝐭𝐮𝐫 𝟏𝟎𝟎% 𝐐𝐨𝐭𝐦𝐚𝐲 𝐈𝐬𝐡𝐥𝐚𝐲 𝐎𝐥𝐚𝐝𝐢.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">𝐅𝐚𝐲𝐥𝐥𝐚𝐫 𝐓𝐨❜𝐩𝐥𝐚𝐦𝐢</div>
+                    <h3>𝐅𝐚𝐲𝐥𝐥𝐚𝐫 𝐓𝐨❜𝐩𝐥𝐚𝐦𝐢</h3>
+                    <p>𝐁𝐢𝐳𝐧𝐢𝐧𝐠 𝐃𝐚𝐬𝐭𝐮𝐫 𝐀𝐬𝐨𝐬𝐚𝐧 ❞𝐙𝐢𝐩, 𝐀𝐩𝐤, 𝐄𝐱𝐞, 𝐓𝐱𝐭, 𝐏𝐝𝐟❞ 𝐊𝐚𝐛𝐢 𝐅𝐚𝐲𝐥𝐥𝐚𝐫𝐧𝐢 𝐎❜𝐳 𝐈𝐜𝐡𝐢𝐠𝐚 𝐎𝐥𝐚𝐝𝐢. 𝐎𝐫𝐭𝐢𝐪𝐜𝐡𝐚 𝐏𝐨𝐜𝐤𝐞𝐭𝐥𝐚𝐫 𝐘𝐨❜𝐪.</p>
+                </div>
+                <div class="card">
+                    <div class="card-img">𝐌𝐚𝐣𝐛𝐮𝐫𝐢𝐲𝐚𝐭</div>
+                    <h3>𝐌𝐚𝐣𝐛𝐮𝐫𝐢𝐲𝐚𝐭</h3>
+                    <p>𝐇𝐨𝐳𝐢𝐫𝐝𝐚 𝐃𝐚𝐬𝐭𝐮𝐫𝐝𝐚 𝐇𝐞𝐜𝐡 𝐐𝐚𝐧𝐝𝐚𝐲 𝐌𝐚𝐣𝐛𝐮𝐫𝐢𝐲𝐚𝐭 𝐘𝐨❜𝐪. ❞𝐋𝐨𝐠𝐢𝐧, 𝐑𝐞𝐠𝐢𝐬𝐭𝐞𝐫, 𝐑𝐞𝐤𝐥𝐚𝐦𝐚, 𝐎𝐛𝐮𝐧𝐚❞ 𝐊𝐚𝐛𝐢 𝐌𝐚𝐣𝐛𝐮𝐫𝐢𝐲𝐚𝐭𝐥𝐚𝐫 𝐘𝐨❜𝐪.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="features-row">
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <h3>𝐊𝐮𝐜𝐡𝐥𝐢 𝐃𝐚𝐬𝐭𝐮𝐫𝐜𝐡𝐢</h3>
+                    <p>𝐇𝐭𝐦𝐥, 𝐂𝐬𝐬, 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭, 𝐑𝐞𝐚𝐜𝐭, 𝐂+, 𝐂##, 𝐏𝐲𝐭𝐡𝐨𝐧.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>𝐓𝐚𝐣𝐫𝐢𝐛𝐚</h3>
+                    <p>𝟓 𝐘𝐢𝐥𝐥𝐢𝐤 𝐓𝐚𝐣𝐫𝐢𝐛𝐚𝐠𝐚 𝐄𝐠𝐚 𝐒𝐞𝐧𝐢𝐨𝐫 𝐯𝐚 𝐉𝐮𝐧𝐢𝐨𝐫 𝐃𝐚𝐬𝐭𝐮𝐫𝐜𝐡𝐢𝐥𝐚𝐫. 𝟐𝟐 𝐆𝐚 𝐘𝐚𝐪𝐢𝐧 𝐅𝐮𝐥𝐥-𝐅𝐫𝐨𝐧𝐭 𝐃𝐚𝐬𝐭𝐮𝐫𝐥𝐚𝐫. 𝟔 𝐆𝐚 𝐘𝐚𝐪𝐢𝐧 𝐅𝐮𝐥𝐥-𝐁𝐚𝐜𝐤𝐞𝐧𝐝 𝐃𝐚𝐬𝐭𝐮𝐫𝐥𝐚𝐫.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💡</div>
+                    <h3>𝐘𝐚𝐧𝐠𝐢𝐥𝐢𝐤</h3>
+                    <p>𝐃𝐚𝐬𝐭𝐮𝐫𝐠𝐚 𝐓𝐡𝐮𝐦𝐛𝐧𝐚𝐢𝐥 𝐘𝐚𝐧𝐢 𝐘𝐨𝐮𝐓𝐮𝐛𝐞, 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 𝐕𝐚 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐔𝐜𝐡𝐮𝐧 𝐄𝐱𝐩𝐞𝐫𝐭 𝐁𝐚𝐧𝐧𝐞𝐫 𝐕𝐚 𝐏𝐫𝐞𝐯𝐢𝐞𝐰𝐥𝐚𝐫 𝐐𝐢𝐬𝐦𝐢𝐧𝐢 𝐐𝐨❜𝐬𝐡𝐚𝐦𝐢𝐳.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section cta">
+        <div class="container">
+            <h2 style="margin-bottom: 1rem; font-size: 2.5rem;">𝐎❜𝐳 𝐃𝐚𝐬𝐭𝐮𝐫𝐢𝐧𝐠𝐢𝐳𝐧𝐢 𝐁𝐢𝐳 𝐁𝐢𝐥𝐚𝐧 𝐘𝐚𝐬𝐚𝐬𝐡𝐠𝐚 𝐓𝐚𝐲𝐲𝐨𝐫𝐦𝐢𝐬𝐢𝐳 ❓</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-dim);">𝐁𝐢𝐳𝐧𝐢𝐧𝐠 𝐉𝐚𝐦𝐨𝐚𝐠𝐚 𝐐𝐨❜𝐬𝐡𝐢𝐥𝐢𝐧𝐠.</p>
+            <a href="https://t.me/colinuzb" class="btn btn-primary">𝐐𝐨❜𝐬𝐡𝐢𝐥𝐢𝐬𝐡.</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>© 𝟐𝟎𝟐𝟔 𝐂𝐨𝐥𝐢𝐧𝐔𝐳𝐛™. 𝐀𝐥𝐥 𝐑𝐢𝐠𝐡𝐭𝐬 𝐑𝐞𝐬𝐞𝐫𝐯𝐞𝐝.</p>
+                </div>
+                <div class="socials">
+                    <a href="https://www.instagram.com/colinuzb">𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</a>
+                    <a href="https://www.youtube.com/@colinuzb">𝐘𝐨𝐮𝐓𝐮𝐛𝐞</a>
+                    <a href="https://t.me/colinuzb">𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦</a>
+                    <a href="https://github.com/colinuzb">𝐆𝐢𝐭𝐇𝐮𝐛</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                header.style.background = 'var(--nav-bg)';
+                header.style.padding = '5px 0';
+            } else {
+                header.style.background = 'transparent';
+                header.style.padding = '0';
+            }
+        });
+    </script>
+</body>
+</html>

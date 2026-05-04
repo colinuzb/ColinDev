@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  /* align-items: center; ni olib tashlaymiz yoki o'zgartiramiz */
+  /* Chunki u kichik ekranda elementni header tagiga tiqib qo'yadi */
+  align-items: flex-start; /* Elementni tepadan boshlash */
+  justify-content: center;
+  padding: 20px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, .1);
+  backdrop-filter: blur(20px);
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header a:hover {
+  color: #60a5fa;
+}
+
+.container {
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  z-index: 1;
+  /* MUHIM O'ZGARISH: Telefonda ham tepadan joy tashlaymiz */
+  /* Bu header ko'rinishi uchun majburiy masofa */
+  margin-top: 80px;
+}
+
+.card {
+  background: #1e293b;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid #334155;
+}
+
+h1 {
+  font-size: 32px;
+  color: #e2e8f0;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #94a3b8;
+  text-align: center;
+  margin-bottom: 40px;
+  display: block; /* Span bo'lgani uchun block qildik */
+}
+
+.preview-section {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  border: 1px solid #334155;
+}
+
+.preview-box {
+  width: 200px;
+  height: 200px;
+  background: #3b82f6;
+  border-radius: 12px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.2s ease;
+}
+
+.controls {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.control-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 16px;
+}
+
+.value {
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #334155;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+  transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  background: #60a5fa;
+}
+
+.code-output {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.code-output label {
+  font-weight: 600;
+  color: #e2e8f0;
+  font-size: 16px;
+}
+
+.code-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f172a;
+  padding: 16px 20px;
+  border-radius: 10px;
+  gap: 16px;
+  border: 1px solid #334155;
+}
+
+code {
+  color: #22c55e;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  flex: 1;
+}
+
+.copy-btn {
+  padding: 8px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.copy-btn:hover {
+  background: #60a5fa;
+  transform: translateY(-2px);
+}
+
+.copy-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .preview-section {
+    padding: 40px;
+    min-height: 250px;
+  }
+
+  .preview-box {
+    width: 150px;
+    height: 150px;
+  }
+
+  code {
+    font-size: 12px;
+  }
+}
+
+/* KOMPYUTER UCHUN MAXSUS QISMI */
+@media (min-width: 768px) {
+  .container {
+    /* Kompyuterda yanada pastroqqa tushiramiz */
+    margin-top: 130px;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>𝐆𝐢𝐭𝐇𝐮𝐛 𝐔𝐬𝐞𝐫 𝐅𝐢𝐧𝐝</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="../../img/logo.png">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../../index.html">𝐐𝐚𝐲𝐭𝐢𝐬𝐡</a>
+
+    </header>
+    <div class="container">
+      <header>
+        <h1><i class="fab fa-github"></i> 𝐆𝐢𝐭𝐇𝐮𝐛 𝐔𝐬𝐞𝐫 𝐅𝐢𝐧𝐝</h1>
+        <p>𝐆𝐢𝐭𝐇𝐮𝐛 𝐔𝐬𝐞𝐫 𝐎𝐫𝐪𝐚𝐥𝐢 𝐁𝐚𝐫𝐜𝐡𝐚 𝐆𝐢𝐭𝐇𝐮𝐛 𝐝𝐚𝐠𝐢 𝐊𝐚𝐧𝐚𝐥 𝐌𝐚𝐥𝐮𝐦𝐨𝐭𝐥𝐚𝐫𝐢𝐧𝐢 𝐎𝐥𝐚𝐬𝐢𝐳.</p>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          placeholder="𝐆𝐢𝐭𝐇𝐮𝐛 𝐔𝐬𝐞𝐫 𝐊𝐢𝐫𝐢𝐭𝐢𝐧𝐠....."
+          autocomplete="off"
+        />
+        <button id="search-btn">𝐐𝐢𝐝𝐢𝐫𝐢𝐬𝐡</button>
+      </div>
+
+      <div id="profile-container" class="hidden">
+        <div class="profile-header">
+          <img src="" alt="Profile avatar" id="avatar" />
+          <div class="profile-info">
+            <h2 id="name"></h2>
+            <p id="username"></p>
+            <p id="bio"></p>
+            <div class="location-date">
+              <p>
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="location">𝐉𝐨𝐲𝐥𝐚𝐬𝐡𝐦𝐚𝐠𝐚𝐧</span>
+              </p>
+              <p>
+                <i class="far fa-calendar-alt"></i>
+                𝐊𝐢𝐫𝐠𝐚𝐧
+                <span id="joined-date"></span>
+              </p>
+            </div>
+            <a id="profile-link" target="_blank" class="btn"> 𝐏𝐫𝐨𝐟𝐢𝐥 𝐊𝐨❜𝐫𝐢𝐬𝐡 </a>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <i class="fas fa-users"></i>
+            <span id="followers"></span> 𝐎𝐛𝐮𝐧𝐚𝐜𝐡𝐢𝐥𝐚𝐫
+          </div>
+
+          <div class="stat">
+            <i class="fas fa-user-friends"></i>
+            <span id="following"></span> 𝐎𝐛𝐮𝐧𝐚𝐬𝐢
+          </div>
+          <div class="stat">
+            <i class="fas fa-code-branch"></i>
+            <span id="repos"></span> 𝐑𝐞𝐩𝐨𝐬𝐭𝐨𝐫𝐲
+          </div>
+        </div>
+
+        <div class="additional-info">
+          <div class="info-item" id="company-container">
+            <i class="fas fa-building"></i>
+            <span id="company">𝐉𝐨𝐲𝐥𝐚𝐬𝐡𝐦𝐚𝐠𝐚𝐧</span>
+          </div>
+          <div class="info-item" id="blog-container">
+            <i class="fas fa-link"></i>
+            <a id="blog" target="_blank">𝐖𝐞𝐛𝐒𝐢𝐭𝐞 𝐘𝐨❜𝐪</a>
+          </div>
+          <div class="info-item" id="twitter-container">
+            <i class="fab fa-twitter"></i>
+            <a id="twitter" target="_blank">𝐓𝐰𝐢𝐭𝐭𝐞𝐫 𝐘𝐨❜𝐪</a>
+          </div>
+        </div>
+
+        <div class="repos-section">
+          <h3>𝐎𝐡𝐢𝐫𝐠𝐢 𝐑𝐞𝐩𝐨𝐬𝐭𝐨𝐫𝐲𝐥𝐚𝐫</h3>
+          <div id="repos-container" class="repos-container">
+            <!-- Repositories will be inserted here dynamically -->
+
+            <div class="loading-repos">𝐑𝐞𝐩𝐨𝐬𝐭𝐨𝐫𝐲 𝐀𝐧𝐢𝐪𝐥𝐚𝐧𝐦𝐨𝐪𝐝𝐚.....</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="error-container" class="hidden">
+        <p>𝐔𝐬𝐞𝐫 𝐓𝐨𝐩𝐢𝐥𝐦𝐚𝐝𝐢. 𝐈𝐥𝐭𝐢𝐦𝐨𝐬 𝐁𝐨𝐬𝐡𝐪𝐚 𝐔𝐬𝐞𝐫 𝐊𝐢𝐫𝐢𝐭𝐢𝐧𝐠.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
